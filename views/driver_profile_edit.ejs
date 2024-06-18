@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Client</title>
+    
+
+  <!-- slider stylesheet -->
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+
+  <!-- bootstrap core css -->
+  <link rel="stylesheet" type="text/css" href="/css/bootstrap.css" />
+
+  <!-- fonts style -->
+  <link href="https://fonts.googleapis.com/css?family=Poppins:400,700&display=swap" rel="stylesheet">
+
+  <!-- Custom styles for this template -->
+  <link href="/css/style.css" rel="stylesheet" />
+  <!-- responsive style -->
+  <link href="/css/responsive.css" rel="stylesheet" />
+  <style>
+    #totalPrice:hover{
+        background-color: #c1c1c1;
+        border-radius: 5px;
+    }
+    .list-group-item.active {
+    background: #ffc107;
+}
+/* end common class */
+.top-status ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 0;
+    margin: 0;
+}
+.top-status ul li {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    border: 8px solid #ddd;
+    box-shadow: 1px 1px 10px 1px #ddd inset;
+    margin: 10px 5px;
+}
+.top-status ul li.active {
+    border-color: #06C167;
+    box-shadow: 1px 1px 20px 1px #ffc107 inset;
+}
+/* end top status */
+
+ul.timeline {
+    list-style-type: none;
+    position: relative;
+}
+ul.timeline:before {
+    content: ' ';
+    background: #d4d9df;
+    display: inline-block;
+    position: absolute;
+    left: 29px;
+    width: 2px;
+    height: 100%;
+    z-index: 400;
+}
+ul.timeline > li {
+    margin: 20px 0;
+    padding-left: 30px;
+}
+ul.timeline > li:before {
+    content: '\2713';
+    background: #fff;
+    display: inline-block;
+    position: absolute;
+    border-radius: 50%;
+    border: 0;
+    left: 5px;
+    width: 50px;
+    height: 50px;
+    z-index: 400;
+    text-align: center;
+    line-height: 50px;
+    color: #d4d9df;
+    font-size: 24px;
+    border: 2px solid var(--ogenix-primary);
+}
+ul.timeline > li.active:before {
+    content: '\2713';
+    background: #28a745;
+    display: inline-block;
+    position: absolute;
+    border-radius: 50%;
+    border: 0;
+    left: 5px;
+    width: 50px;
+    height: 50px;
+    z-index: 400;
+    text-align: center;
+    line-height: 50px;
+    color: #fff;
+    font-size: 30px;
+    border: 2px solid var(--ogenix-primary);
+}
+/* end timeline */
+  </style>
+      <style>
+        .list-group-item.active {
+    background: #06C167 !important;
+}
+/* .bg-warning {
+    background: #06C167 !important;
+} */
+.modal-content {
+        background-color: #fefefe;
+        margin: 4% auto;
+        padding: 20px;
+        border: 1px solid #888;
+        width: 70%;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        transition: transform 0.3s ease-in-out;
+        /*transform: translateY(-100%);*/
+    }
+    .close {
+        float: right;
+        text-align: right;
+        font-size: 30px;
+    }
+    .modal-content h2 {
+        text-align: center;
+        margin-top: -35px;
+    }
+    .button_div {
+        justify-content: center;
+        text-align: center;
+    }
+    .button_div button {
+        margin-right: 10px;
+        background: #06C167;
+        border: 1px solid #06C167;
+        padding: 5px 15px;
+        color: #FFFFFF;
+        border-radius: 2px;
+    }
+    #addAddressForm input {
+        padding: 5px;
+    }
+    .nice-select {
+        padding: 0px !important;
+        height: 38px !important;
+        line-height: 38px !important;
+    }
+    
+    .add_address_button {
+        background: #06C167;
+        border: 1px solid #06C167;
+        padding: 5px 15px;
+        color: #FFFFFF;
+        border-radius: 2px;
+    }
+    
+    @media (max-width: 768px) {
+        .main_flex_div {
+            display: flex;
+            flex-direction: column;
+        }
+        .inner_flex_div {
+            min-width: 100% !important;
+        }
+        .modal-content {
+            padding: 10px 0px !important;
+            min-width: 95% !important;
+            height: 700px;
+            overflow: scroll;
+        }
+        .close {
+            margin-right: 10px;
+        }
+    }
+    
+    
+    .show-edit{
+      display: none;
+    }
+    </style>
+</head>
+<body>
+      <!-- <div class="hero_area"> -->
+        <%- include("driver_header") %>
+      
+      <div class="row">
+        <div class="col-md-9 col-sm-12 m-auto">
+          <% for( let i = 1; i < profile.length; i++ ) { %>  
+                <div class="row">
+                    <div class="col-lg-4">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="d-flex flex-column align-items-center text-center">
+                                    <img src="https://as1.ftcdn.net/v2/jpg/03/46/83/96/1000_F_346839683_6nAPzbhpSkIpb8pmAwufkC7c5eD7wYws.jpg" alt="Admin"
+                                        class="rounded-circle rounded-secondary p-1 bg-secondary" width="110">
+                                    <div class="mt-3">
+                                        <h4><%= profile[i].ismi %></h4>
+                                        <p class="text-secondary mb-1"><%= profile[i].raqami %></p>
+                                        <p class="text-muted font-size-sm"><%= profile[i].qayerdan %></p>
+                                    </div>
+                                </div>
+                                <div class="list-group list-group-flush text-center mt-4">
+                                    <a href="#" class="list-group-item list-group-item-action border-0 bg-secondary text-white" >
+                                        Profil malumotlari
+                                    </a>
+                                  
+                                    <a href="#" class="list-group-item list-group-item-action border-0">Chiqish</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-8">
+                        
+                        
+                        <div id="profileDetails" class="card">
+                        <div class="card-body">
+                            <div class="profile-info">
+                            <div class="show-edit">
+                              <form action="/driver/updateprofile" method="post" class="row">
+                                <div class="form-group col-md-6 col-sm-12">
+                                  <label for="name"> Name</label>
+                                  <input id="name" name="name" type="text" class="form-control" value="<%= profile[i].ismi %>">
+                                </div>
+                                <div class="form-group col-md-6  col-sm-12">
+                                  <label for="age"> Yosh</label>
+                                  <input id="age" name="age" type="text" class="form-control" value="24">
+                                </div>
+                                <div class="form-group col-md-6 col-sm-12">
+                                  <label for="kasb"> Kasbi</label>
+                                  <input id="kasb" name="kasb" type="text" class="form-control" value="<%= profile[i].kasbi %>">
+                                </div>
+                                <div class="form-group col-md-6  col-sm-12">
+                                  <label for="xobbi"> Xobbi</label>
+                                  <input id="xobbi" name="xobbi" type="text" class="form-control" value="Furbol o'ynash">
+                                </div>
+                                <div class="form-group col-md-6  col-sm-12">
+                                  <label for="phone"> Telefon Raqami</label>
+                                  <input id="phone" name="phone" type="phone" class="form-control" value="<%= profile[i].raqami %>">
+                                </div>
+                              <!-- </form> -->
+                                <h5>Mashina ma'lumotlari</h5>
+                              <!-- <form action="#" class="row"> -->
+                                <div class="form-group col-md-6 col-sm-12">
+                                  <label for="car">Mashina rusumi</label>
+                                  <input id="car" name="car" type="text" class="form-control" value="<%= profile[i].mashina_rusumi %>">
+                                </div>
+                                <div class="form-group col-md-6  col-sm-12">
+                                  <label for="number">Raqami</label>
+                                  <input id="number" name="number" type="text" class="form-control" value="<%= profile[i].mashina_raqam %>">
+                                </div>
+                                <div class="form-group col-md-6 col-sm-12">
+                                  <label for="count">O'rindqilar soni</label>
+                                  <input id="count" name="count" type="number" class="form-control" value="<%= profile[i].chair_number %>">
+                                </div>
+                                <div class="form-group col-md-6  col-sm-12">
+                                  <label for="img">Mashina rasmi </label>
+                                  <input id="img" name="img" type="file" accept="image/*" class="form-control" value="<%= profile[i].picture_url %>">
+                                </div>
+                              </form>
+                            </div>
+                               <div class="hide-edit">
+                                <div class="row">
+
+                                
+                                <p class="col-md-6 col-sm-12"><strong>Ismi:</strong> <%= profile[i].ismi %></p>
+                                <p class="col-md-6 col-sm-12"><strong>Email Address:</strong> <%= profile[i].email %></p>
+                                <p class="col-md-6 col-sm-12"><strong>Raqami:</strong> <%= profile[i].raqami %></p>
+                                <p class="col-md-6 col-sm-12"><strong>Tug'ilgan sanasi:</strong> <%= profile[i].dob %></p>
+                                <p class="col-md-6 col-sm-12"><strong>Jinsi:</strong> <%= profile[i].jinsi == 1? 'Erkak': 'Ayol' %></p>
+                                <p class="col-md-6 col-sm-12"><strong>Qayerdan:</strong> <%= profile[i].qayerdan %></p>
+                                <p class="col-md-6 col-sm-12"><strong>Mashina rusumi:</strong> <%= profile[i].mashina_rusumi %></p>
+                                <p class="col-md-6 col-sm-12"><strong>Mashina Raqami:</strong> <%= profile[i].mashina_raqam %></p>
+                                <p class="col-md-6 col-sm-12"><strong>O'rindiqlar soni:</strong> <%= profile[i].chair_number %></p>
+                                <p class="col-md-6 col-sm-12"><strong>Chekish va ichkilik:</strong><%= profile[i].smoke == 1? ' Mumkin':' Taqiqlanadi' %></p>
+                                <p class="col-md-6 col-sm-12"><strong>Role:</strong> Haydovchi</p>
+                              </div>
+                               </div>
+                               <button class="btn btn-warning" id="edit-info">Tahrirlash</button>
+                            </div>
+                        </div>
+                    </div>
+                    
+              
+
+
+
+                    </div>
+                </div>
+            
+
+   
+         
+       
+            </div>
+            <% }%>
+        </div>
+      </div>
+</body>
+<script>
+          
+
+</script>
+
+<script>
+  document.getElementById("edit-info").addEventListener('click',(e)=>{
+    
+      document.querySelector(".show-edit").style.display=(e.target.innerHTML=="Tahrirlash")?'block':'none'
+      document.querySelector(".hide-edit").style.display=(e.target.innerHTML=="Tahrirlash")?'none':"block"
+      e.target.innerHTML=(e.target.innerHTML=="Tahrirlash")?"Saqlash":"Tahrirlash"
+   
+  })
+</script>
+</html>

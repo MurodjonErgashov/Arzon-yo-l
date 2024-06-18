@@ -1,0 +1,454 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!-- Basic -->
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <!-- Mobile Metas -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <!-- Site Metas -->
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <meta name="author" content="" />
+
+  <title>Arzon yo'l</title>
+
+
+  <!-- slider stylesheet -->
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+
+  <!-- bootstrap core css -->
+  <link rel="stylesheet" type="text/css" href="/css/bootstrap.css" />
+
+  <!-- fonts style -->
+  <link href="https://fonts.googleapis.com/css?family=Poppins:400,700&display=swap" rel="stylesheet">
+
+  <!-- Custom styles for this template -->
+  <link href="/css/style.css" rel="stylesheet" />
+  <!-- responsive style -->
+  <link href="/css/responsive.css" rel="stylesheet" />
+
+  <style>
+    form input {
+      box-shadow: 0 0 5px #c2c1c1;
+      border-radius: 5px;
+    }
+
+    .dropdown {
+      box-shadow: 0 0 5px #c2c1c1;
+      border-radius: 5px;
+      width: 350px;
+      height: 45px;
+      margin-bottom: 20px;
+    }
+
+    /* .img-box{
+      height: 200px
+    } */
+    
+
+    .news_container {
+            display: flex;
+            overflow: hidden;
+            width: 100%;
+            /* margin: 0 auto; */
+            position: relative !important;
+        }
+#slicer{
+  position: relative;
+}
+        .news_container  .box {
+            width:25%; /* Set the width to 25% to show 4 items in one row */
+           margin: 0 10px !important;
+        }
+
+        #prev-btn, #next-btn {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            background: transparent;
+            border: 1px solid #c2c1c1;
+            border-radius: 50%;
+            height: 40px;
+            width: 40px;
+            left: -10px;
+            outline: none;
+        }
+        #next-btn {
+          left: auto;
+          right: -10px;
+        }
+
+
+        /* Dropdown Button */
+.dropbtn {
+  background-color: #ccc;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+/* Dropdown button on hover & focus */
+.dropbtn:hover, .dropbtn:focus {
+  background-color: #c2c1c1;
+}
+
+/* The search field */
+#myInput,#myInput1 {
+  box-sizing: border-box;
+  background-image: url('searchicon.png');
+  background-position: 14px 12px;
+  background-repeat: no-repeat;
+  font-size: 16px;
+  padding: 14px 20px 12px 45px;
+  border: none;
+  border-bottom: 1px solid #ddd;
+}
+
+/* The search field when it gets focus/clicked on */
+#myInput,#myInput1:focus {outline: 3px solid #ddd;}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f6f6f6;
+  /* min-width: 230px; */
+  border: 1px solid #ddd;
+  z-index: 1;
+  width: 100%;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+.show {display:block;}
+       
+    :root{
+    --gutter_0: 0.75rem;
+--gutter_1: 1.25rem;
+--gutter_2: 1.75rem;
+--bg-color: white;
+    }
+
+.widget {
+  padding: var(--gutter_0) var(--gutter_1);
+  width: 278px;
+  color: rgba(0, 0, 0, 0.87);
+  background-color: var(--bg-color);
+  border-radius: 2px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+ }
+ .widget h2 {
+    background-color: darken(var(--bg-color), 4%);
+    border-top-left-radius: 2px;
+    border-top-right-radius: 2px;
+    margin-top: -var(--gutter_0);
+    margin-left: -var(--gutter_1);
+    margin-right: -var(--gutter_1);
+    padding: var(--gutter_0) var(--gutter_1);
+    text-align: center;
+    cursor: default;
+  }
+  .widget form   label {
+      width: 100%;
+      text-align: center;
+    }
+    .widget form   label:hover h2 {
+      background-color: darken(var(--bg-color), 8%);
+    }
+  
+#user_age_handler_min,
+#user_age_handler_max {
+  width: 3em;
+  margin-left: -1.5em;
+  height: 1.6em;
+  top: 50%;
+  margin-top: -0.8em;
+  text-align: center;
+  line-height: 1.6em;
+}
+
+.card {
+  max-width: 40em;
+  flex-direction: row;
+  background-color: #696969;
+  border: 0;
+  box-shadow: 0 7px 7px rgba(0, 0, 0, 0.18);
+  margin: 3em auto;
+}
+.card.dark {
+  color: #fff;
+}
+.card.card.bg-light-subtle .card-title {
+  color: dimgrey;
+}
+
+.card img {
+  max-width: 25%;
+  margin: auto;
+  padding: 0.5em;
+  border-radius: 0.7em;
+}
+.card-body {
+  display: flex;
+  justify-content: space-between;
+}
+.text-section {
+  max-width: 60%;
+}
+.cta-section {
+  max-width: 40%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+.cta-section .btn {
+  padding: 0.3em 0.5em;
+  /* color: #696969; */
+}
+.card.bg-light-subtle .cta-section .btn {
+  background-color: #898989;
+  border-color: #898989;
+}
+@media screen and (max-width: 475px) {
+  .card {
+    font-size: 0.9em;
+  }
+}
+
+        /* Dropdown Button */
+        .dropbtn {
+  background-color: #ccc;
+  color: white;
+  padding: 10px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+
+/* Dropdown button on hover & focus */
+.dropbtn:hover, .dropbtn:focus {
+  background-color: #c2c1c1;
+}
+
+/* The search field */
+#myInput,#myInput1 {
+  box-sizing: border-box;
+  background-image: url('searchicon.png');
+  background-position: 14px 12px;
+  background-repeat: no-repeat;
+  font-size: 16px;
+  padding:10px;
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid #ddd;
+}
+
+/* The search field when it gets focus/clicked on */
+#myInput:focus,#myInput1:focus {outline: 3px solid #ddd;}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f6f6f6;
+  min-width: 150px;
+  border: 1px solid #ddd;
+  z-index: 1;
+  /* width: 100%; */
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+.show {display:block;left: 0;}
+ 
+.medium .circle-start,
+.medium .circle-end
+{
+  display: block;
+  height: 10px;
+  width: 10px;
+  border: 3px solid #c2c1c1;
+  border-radius: 50%;
+}
+.medium{
+  display: flex;
+  justify-content: space-between;
+  width: 400px;
+}
+.medium .circle-medium{
+  height: 4px;
+  display: block;
+  margin-top: 2.5px;
+  width: 100%;
+  background: #c2c1c1;
+}
+.end,.start{
+  display: flex;
+  justify-content: space-between;
+  width: 400px;
+}
+
+#user_wiget_search_form input {
+  box-shadow: none;
+}
+  </style>
+  
+
+</head>
+
+<body>
+
+  <!-- <div class="hero_area"> -->
+  
+
+    <%- include("driver_header") %>
+
+<div class="row">
+  <div class="container">
+        <div class="col-12">  
+              <% for( let i = 0; i < routes1.length; i++ ) { %>
+               
+        <div class="card dark bg-warning">
+            <!-- <img src="https://codingyaar.com/wp-content/uploads/chair-image.jpg" class="card-img-top" alt="..."> -->
+            <div class="card-body">
+              <div class="text-section">
+                <h5 class="card-title"><%= String(routes1[i].kun).substring(0,16) %></h5>
+                <div class="card-text">
+                  <div class="start">
+                    <div class="left">
+                        <%=  routes1[i].qayerdan %>
+                    </div>
+                    <div class="right">
+                        <%=  routes1[i].qayerga  %>
+                    </div>
+                  </div>
+                  <div class="medium">
+                    <span class="circle-start"></span>
+                    <span class="circle-medium"></span>
+                    <span class="circle-end"></span>
+                  </div>
+                <div class="end">
+                  <div class="left">
+                    <%= routes1[i].vaqt_from %>
+                  </div>
+                  <div class="center">
+                    1h 30min
+                  </div>
+                  <div class="right">
+                    <%= routes1[i].vaqt_to %>
+                  </div>
+                </div>
+              </div>
+               <div class=" d-flex justify-content-start align-items-center">
+
+                <img src="https://media.istockphoto.com/id/1300845620/vector/user-icon-flat-isolated-on-white-background-user-symbol-vector-illustration.jpg?s=612x612&w=0&k=20&c=yBeyba0hUkh14_jgv1OKqIH0CCSWU_4ckRkAoy2p73o=" class="m-0" alt="" height="60px"  style="border-radius: 50%;object-fit: contain;"> 
+                <h6 class="mb-0 mr-4">  Yo'lovchi: <%= routes1[i].ismi %></h6>
+                <p class="mb-0">O'rindiqlar soni: <%= routes1[i].number_people %></p>
+               </div>
+              </div>
+              <div class="cta-section">
+                <div><%= routes1[i].summa %></div>
+                <!-- <a href="/signin" class="btn btn-light">Buyurtma</a> -->
+              </div>
+            </div>
+          </div>
+          
+          <% } %>
+      </div>
+      <form class="col-12">  
+        <% for( let i = 0; i < routes.length; i++ ) { %>
+         
+  <div class="card dark">
+      <!-- <img src="https://codingyaar.com/wp-content/uploads/chair-image.jpg" class="card-img-top" alt="..."> -->
+      <div class="card-body">
+        <div class="text-section">
+          <h5 class="card-title"><%= String(routes[i].kun).substring(0,16) %></h5>
+          <div class="card-text">
+            <div class="start">
+              <div class="left">
+                  <%=  routes[i].qayerdan %>
+              </div>
+              <div class="right">
+                  <%=  routes[i].qayerga  %>
+              </div>
+            </div>
+            <div class="medium">
+              <span class="circle-start"></span>
+              <span class="circle-medium"></span>
+              <span class="circle-end"></span>
+            </div>
+          <div class="end">
+            <div class="left">
+              <%= routes[i].vaqt_from %>
+            </div>
+            <div class="center">
+              1h 30min
+            </div>
+            <div class="right">
+              <%= routes[i].vaqt_to %>
+            </div>
+          </div>
+        </div>
+         <div class=" d-flex justify-content-start align-items-center">
+
+          <img src="https://media.istockphoto.com/id/1300845620/vector/user-icon-flat-isolated-on-white-background-user-symbol-vector-illustration.jpg?s=612x612&w=0&k=20&c=yBeyba0hUkh14_jgv1OKqIH0CCSWU_4ckRkAoy2p73o=" class="m-0" alt="" height="60px"  style="border-radius: 50%;object-fit: contain;"> 
+          <h6 class="mb-0 mr-4">  Yo'lovchi: <%= routes[i].ismi %></h6>
+          <p class="mb-0">O'rindiqlar soni: <%= routes[i].number_people %></p>
+         </div>
+        </div>
+        <div class="cta-section">
+          <div><%= routes[i].summa %></div>
+          <a href="/driver/comm" class="btn btn-light">Sharh yozish</a>
+        </div>
+      </div>
+    </div>
+    
+    <% } %>
+</div>
+</div>
+</div>
+</body>
+
+ 
+

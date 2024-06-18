@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Driver</title>
+    
+
+  <!-- slider stylesheet -->
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+
+  <!-- bootstrap core css -->
+  <link rel="stylesheet" type="text/css" href="/css/bootstrap.css" />
+
+  <!-- fonts style -->
+  <link href="https://fonts.googleapis.com/css?family=Poppins:400,700&display=swap" rel="stylesheet">
+
+  <!-- Custom styles for this template -->
+  <link href="/css/style.css" rel="stylesheet" />
+  <!-- responsive style -->
+  <link href="/css/responsive.css" rel="stylesheet" />
+  <style>
+    #totalPrice:hover{
+        background-color: #c1c1c1;
+        border-radius: 5px;
+    }
+ 
+    #img-profile{
+      border-radius: 50%;
+      border: 3px solid #c1c1c1;
+    }
+  </style>
+</head>
+<body>
+      <!-- <div class="hero_area"> -->
+       
+        <%- include("driver_header") %>
+      <div class="row">
+        <div class="col-md-6 col-sm-12 m-auto">
+            <div class="card">
+                <div class="card-body">
+                  <div class="row d-flex justify-content-between px-4 mb-4">
+                    <div class="">
+                      <h3><%= mess%></h3>
+                      <p>Kasbi: Shifokor</p>
+                    </div>
+                    <div class="">
+                      <img src="/images/client-1.png" id="img-profile" height="80" width="80" class="" alt="">
+                      
+                    </div>
+                  </div>
+                  <a href="#" id="totalPrice" class="btn btn-outline border-bottom py-3 w-100 d-flex justify-content-start align-items-center">
+                    <span class="badge badge-outline mb-0 mr-3">🌟</span> 4.5/5 - 20 rating 
+                  </a>
+
+                  <a href="#" id="totalPrice" class="btn btn-outline border-bottom py-3 w-100 d-flex justify-content-start align-items-center">
+                    <span class="badge badge-outline mb-0 mr-3">✅</span> Tasdiqlangan telefon raqam
+                  </a>
+
+                  <a href="#" id="totalPrice" class="btn btn-outline border-bottom py-3 w-100 d-flex justify-content-start align-items-center">
+                    <span class="badge badge-outline mb-0 mr-3"></span> 12 marta mashrut yaratgan
+                  </a>
+
+                  <a href="#" id="totalPrice" class="btn btn-outline border-bottom py-3 w-100 d-flex justify-content-start align-items-center">
+                    <span class="badge badge-outline mb-0 mr-3"></span> 2024 yil apreldan azo bo'lgan
+                  </a>
+                </div>
+            </div>
+        </div>
+      </div>
+</body>
+</html>

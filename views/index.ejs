@@ -1,0 +1,1199 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!-- Basic -->
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <!-- Mobile Metas -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <!-- Site Metas -->
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <meta name="author" content="" />
+
+  <title>Arzon yo'l</title>
+
+
+  <!-- slider stylesheet -->
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+
+  <!-- bootstrap core css -->
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+
+  <!-- fonts style -->
+  <link href="https://fonts.googleapis.com/css?family=Poppins:400,700&display=swap" rel="stylesheet">
+
+  <!-- Custom styles for this template -->
+  <link href="css/style.css" rel="stylesheet" />
+  <!-- responsive style -->
+  <link href="css/responsive.css" rel="stylesheet" />
+
+  <style>
+    form input {
+      box-shadow: 0 0 5px #c2c1c1;
+      border-radius: 5px;
+    }
+
+    .dropdown {
+      box-shadow: 0 0 5px #c2c1c1;
+      border-radius: 5px;
+      width: 350px;
+      height: 45px;
+      margin-bottom: 20px;
+    }
+
+    /* .img-box{
+      height: 200px
+    } */
+    
+
+    .news_container {
+            display: flex;
+            overflow: hidden;
+            width: 100%;
+            /* margin: 0 auto; */
+            position: relative !important;
+        }
+#slicer{
+  position: relative;
+}
+        .news_container  .box {
+            width:25%; /* Set the width to 25% to show 4 items in one row */
+           margin: 0 10px !important;
+        }
+
+        #prev-btn, #next-btn {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            background: transparent;
+            border: 1px solid #c2c1c1;
+            border-radius: 50%;
+            height: 40px;
+            width: 40px;
+            left: -10px;
+            outline: none;
+        }
+        #next-btn {
+          left: auto;
+          right: -10px;
+        }
+
+
+        /* Dropdown Button */
+.dropbtn {
+  background-color: #ccc;
+  color: white;
+  padding: 10px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+
+/* Dropdown button on hover & focus */
+.dropbtn:hover, .dropbtn:focus {
+  background-color: #c2c1c1;
+}
+
+/* The search field */
+#myInput {
+  box-sizing: border-box;
+  background-image: url('searchicon.png');
+  background-position: 14px 12px;
+  background-repeat: no-repeat;
+  font-size: 16px;
+  padding: 14px 20px 12px 45px;
+  border: none;
+  border-bottom: 1px solid #ddd;
+}
+
+/* The search field when it gets focus/clicked on */
+#myInput:focus {outline: 3px solid #ddd;}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f6f6f6;
+  min-width: 230px;
+  border: 1px solid #ddd;
+  z-index: 1;
+  width: 100%;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+.show {display:block;}
+ 
+.img_style{
+  height: 250px;
+  width: 250px;
+  object-fit: cover;
+}
+  </style>
+  
+
+</head>
+
+<body>
+
+  <div class="hero_area">
+    <!-- header section strats -->
+    <header class="header_section">
+      <div class="container-fluid">
+        <nav class="navbar navbar-expand-lg custom_nav-container ">
+          <a class="navbar-brand" href="/">
+            <span>
+              Arzon Yo'l
+            </span>
+          </a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <div class="d-flex ml-auto flex-column flex-lg-row align-items-center">
+              <!-- <ul class="navbar-nav  ">
+                <li class="nav-item active">
+                  <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="about.html"> About</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="service.html"> Services </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="news.html"> News</a>
+                </li>    
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Login</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="contact.html">Yangi mashrut</a>
+                </li>
+              </ul> -->
+            </div>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <!-- end header section -->
+    <!-- slider section -->
+    <section class=" slider_section ">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-md-7 ">
+            <div class="box">
+              <div class="detail-box">
+                <h1 class="mb-0">
+                  Arzon yo'l
+                </h1>
+                <h4>
+                  ilovasiga xush kelibsiz!
+                </h4>
+                
+              </div>
+              <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                <ol class="carousel-indicators">
+                  <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                  <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                  <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                  <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+                  <li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
+                </ol>
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+
+                    <div class="img-box">
+                      <img src="images/slider-img.png" alt="">
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <div class="img-box">
+                      <img src="images/slider-img.png" alt="">
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <div class="img-box">
+                      <img src="images/slider-img.png" alt="">
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <div class="img-box">
+                      <img src="images/slider-img.png" alt="">
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <div class="img-box">
+                      <img src="images/slider-img.png" alt="">
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="btn-box">
+                <a href="/signin" class="btn-1">
+                  Tizimga kirish
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-5 " style="margin-top: -100px;">
+            <div class="slider_form" style="background: transparent;">
+              <h4 class="text-dark">
+                Mashrutni tanlang
+              </h4>
+              <form method="get" action="/mavjud_mashruts">
+                <div class="dropdown">
+                  <div onclick="myFunction()" id="dropbtn" name="from" class="dropbtn">Qayerdan</div>
+                  <div id="myDropdown" class="dropdown-content">
+                    <input name="myDropdown1" type="text" placeholder="Search.." id="myInput" onkeyup="filterFunction()">
+                    <!-- <a >About</a>
+                    <a>Base</a>
+                    <a >Blog</a> -->
+                    <% for( let i = 0; i < address.length; i++ ) { %>
+                      <a id="<%= address[i].id %>"><%= address[i].adres_name %> </a>
+                    <% } %>
+                  </div>
+                </div>
+                <div class="dropdown">
+                  <div onclick="myFunction1()" id="dropbtn1" name="to" class="dropbtn">Qayerga</div>
+                  <div id="myDropdown1" class="dropdown-content">
+                    <input type="text" name="myDropdown2" placeholder="Search.." id="myInput1" onkeyup="filterFunction1()">
+                    <!-- <a id="1">Custom</a>
+                    <a >Support</a>
+                    <a >Tools</a> -->
+                    <% for( let i = 0; i < address.length; i++ ) { %>
+                      <a id="<%= address[i].id %>"><%= address[i].adres_name %> </a>
+                    <% } %>
+                  </div>
+                </div>
+                <input type="datetime-local" class="form-control" name="date1" id="" placeholder="Qachon">
+                
+                <div class="row d-flex m-0 align-items-center justify-content-between mb-3">
+                      <a href="#" class="quantity__minus btn btn-secondary" ><span>-</span></a>
+                      <input name="quantity" type="text" class="quantity__input form-control mb-0" style="width: auto;" value="1">
+                      <a href="#" class="quantity__plus btn  btn-secondary" ><span>+</span></a>
+                </div>
+                <button class="btn btn-warning text-white float-right">Qidirish</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </section>
+    <!-- end slider section -->
+  </div>
+
+  <!-- about section -->
+
+  <section class="about_section layout_padding">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-lg-4 col-md-5 offset-lg-2 offset-md-1">
+          <div class="detail-box">
+            <h2>
+              Biz haqimizda
+            </h2>
+            <p>
+              Bu web ilovaning maqsadi katta sharalar, viloyatlar orasidagi mashrutlarni maroqli va odatdagidan arzon narxga o'tkazish uchun yo'lovchilarga o'zlariga mos yo'lovchini va haydovchini tanlash, haydovchilarga ham mos yo'lovchilarni tanlab harakatlanish imkonini beradi.
+            </p>
+            <a href="/signin">
+              Tizimga kirish
+            </a>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="img-box">
+            <img src="images/about-img.png" alt="">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- end about section -->
+ 
+    <!-- news section -->
+
+    <section class="news_section layout_padding">
+      <div class="container">
+        <div class="heading_container">
+          <h2>
+            Yaqin qolgan<br>
+            mashrutlar
+          </h2>
+        </div>
+      <div id="slicer">
+        <div class="news_container" >
+          <% for( let i = 0; i < routes.length; i++ ) { %>
+          <div class="box">
+            <div class="date-box">
+              <h6>
+              <%=  String(routes[i].kun).substring(0,16) %>
+              </h6>
+            </div>
+            <div class="img-box">
+              <img class="img_style" src="images/images<%= i+1 %>.jpeg" alt="">
+            </div>
+            <div class="detail-box">
+              <p style="font-weight: 500;">
+                Qayerdan:
+                <span class="small">    <%= routes[i].address_qayerdan  %></span>
+              </p> 
+              <p style="font-weight: 500;">
+                Qayerga:
+                <span class="small">    <%=  routes[i].address_qayerga  %></span>
+              </p> 
+             <div class="d-flex justify-content-between">
+              <div class="price d-flex">
+                <span>Bosh joy: </span>
+                <p><%= routes[i].y_soni %> ta</p>
+              </div>
+              <div class="duration d-flex">
+                <span>◷</span>
+                <p>  <%= routes[i].vaqt_from %></p>
+              </div>
+              
+             </div>
+            </div>
+          </div>
+          <% } %>
+          <!-- <div class="box">
+            <div class="date-box">
+              <h6>
+                01 Fev 2023
+              </h6>
+            </div>
+            <div class="img-box">
+              <img src="images/news-img.jpg" alt="">
+            </div>
+            <div class="detail-box">
+              <p style="font-weight: 500;">
+                Qayerdan:
+                <span class="small"> Qaraqalpog'iston res, Jondor</span>
+              </p> 
+              <p style="font-weight: 500;">
+                Qayerga:
+                <span class="small"> Buxoro, Shofirkon</span>
+              </p> 
+             <div class="d-flex justify-content-between">
+              <div class="price d-flex">
+                <span>Bosh joy: </span>
+                <p>3ta</p>
+              </div>
+              <div class="duration d-flex">
+                <span>◷</span>
+                <p>  20:00</p>
+              </div>
+              
+             </div>
+            </div>
+          </div>
+          <div class="box">
+            <div class="date-box">
+              <h6>
+                01 Fev 2023
+              </h6>
+            </div>
+            <div class="img-box">
+              <img src="images/news-img.jpg" alt="">
+            </div>
+            <div class="detail-box">
+              <p style="font-weight: 500;">
+                Qayerdan:
+                <span class="small"> Qaraqalpog'iston res, Jondor</span>
+              </p> 
+              <p style="font-weight: 500;">
+                Qayerga:
+                <span class="small"> Buxoro, Shofirkon</span>
+              </p> 
+             <div class="d-flex justify-content-between">
+              <div class="price d-flex">
+                <span>Bosh joy: </span>
+                <p>3ta</p>
+              </div>
+              <div class="duration d-flex">
+                <span>◷</span>
+                <p>  20:00</p>
+              </div>
+              
+             </div>
+            </div>
+          </div>
+          <div class="box">
+            <div class="date-box">
+              <h6>
+                01 Fev 2023
+              </h6>
+            </div>
+            <div class="img-box">
+              <img src="images/news-img.jpg" alt="">
+            </div>
+            <div class="detail-box">
+              <p style="font-weight: 500;">
+                Qayerdan:
+                <span class="small"> Qaraqalpog'iston res, Jondor</span>
+              </p> 
+              <p style="font-weight: 500;">
+                Qayerga:
+                <span class="small"> Buxoro, Shofirkon</span>
+              </p> 
+             <div class="d-flex justify-content-between">
+              <div class="price d-flex">
+                <span>Bosh joy: </span>
+                <p>3ta</p>
+              </div>
+              <div class="duration d-flex">
+                <span>◷</span>
+                <p>  20:00</p>
+              </div>
+              
+             </div>
+            </div>
+          </div> 
+          <div class="box">
+            <div class="date-box">
+              <h6>
+                01 Fev 2023
+              </h6>
+            </div>
+            <div class="img-box">
+              <img src="images/news-img.jpg" alt="">
+            </div>
+            <div class="detail-box">
+              <p style="font-weight: 500;">
+                Qayerdan:
+                <span class="small"> Qaraqalpog'iston res, Jondor</span>
+              </p> 
+              <p style="font-weight: 500;">
+                Qayerga:
+                <span class="small"> Buxoro, Shofirkon</span>
+              </p> 
+             <div class="d-flex justify-content-between">
+              <div class="price d-flex">
+                <span>Bosh joy: </span>
+                <p>3ta</p>
+              </div>
+              <div class="duration d-flex">
+                <span>◷</span>
+                <p>  20:00</p>
+              </div>
+              
+             </div>
+            </div>
+          </div>
+          <div class="box">
+            <div class="date-box">
+              <h6>
+                01 Fev 2023
+              </h6>
+            </div>
+            <div class="img-box">
+              <img src="images/news-img.jpg" alt="">
+            </div>
+            <div class="detail-box">
+              <p style="font-weight: 500;">
+                Qayerdan:
+                <span class="small"> Qaraqalpog'iston res, Jondor</span>
+              </p> 
+              <p style="font-weight: 500;">
+                Qayerga:
+                <span class="small"> Buxoro, Shofirkon</span>
+              </p> 
+             <div class="d-flex justify-content-between">
+              <div class="price d-flex">
+                <span>Bosh joy: </span>
+                <p>3ta</p>
+              </div>
+              <div class="duration d-flex">
+                <span>◷</span>
+                <p>  20:00</p>
+              </div>
+              
+             </div>
+            </div>
+          </div>
+          <div class="box">
+            <div class="date-box">
+              <h6>
+                01 Fev 2023
+              </h6>
+            </div>
+            <div class="img-box">
+              <img src="images/news-img.jpg" alt="">
+            </div>
+            <div class="detail-box">
+              <p style="font-weight: 500;">
+                Qayerdan:
+                <span class="small"> Qaraqalpog'iston res, Jondor</span>
+              </p> 
+              <p style="font-weight: 500;">
+                Qayerga:
+                <span class="small"> Buxoro, Shofirkon</span>
+              </p> 
+             <div class="d-flex justify-content-between">
+              <div class="price d-flex">
+                <span>Bosh joy: </span>
+                <p>3ta</p>
+              </div>
+              <div class="duration d-flex">
+                <span>◷</span>
+                <p>  20:00</p>
+              </div>
+              
+             </div>
+            </div>
+          </div>
+          <div class="box">
+            <div class="date-box">
+              <h6>
+                01 Fev 2023
+              </h6>
+            </div>
+            <div class="img-box">
+              <img src="images/news-img.jpg" alt="">
+            </div>
+            <div class="detail-box">
+              <p style="font-weight: 500;">
+                Qayerdan:
+                <span class="small"> Qaraqalpog'iston res, Jondor</span>
+              </p> 
+              <p style="font-weight: 500;">
+                Qayerga:
+                <span class="small"> Buxoro, Shofirkon</span>
+              </p> 
+             <div class="d-flex justify-content-between">
+              <div class="price d-flex">
+                <span>Bosh joy: </span>
+                <p>3ta</p>
+              </div>
+              <div class="duration d-flex">
+                <span>◷</span>
+                <p>  20:00</p>
+              </div>
+              
+             </div>
+            </div>
+          </div>
+          <div class="box">
+            <div class="date-box">
+              <h6>
+                01 Fev 2023
+              </h6>
+            </div>
+            <div class="img-box">
+              <img src="images/news-img.jpg" alt="">
+            </div>
+            <div class="detail-box">
+              <p style="font-weight: 500;">
+                Qayerdan:
+                <span class="small"> Qaraqalpog'iston res, Jondor</span>
+              </p> 
+              <p style="font-weight: 500;">
+                Qayerga:
+                <span class="small"> Buxoro, Shofirkon</span>
+              </p> 
+             <div class="d-flex justify-content-between">
+              <div class="price d-flex">
+                <span>Bosh joy: </span>
+                <p>3ta</p>
+              </div>
+              <div class="duration d-flex">
+                <span>◷</span>
+                <p>  20:00</p>
+              </div>
+              
+             </div>
+            </div>
+          </div>
+          <div class="box">
+            <div class="date-box">
+              <h6>
+                01 Fev 2023
+              </h6>
+            </div>
+            <div class="img-box">
+              <img src="images/news-img.jpg" alt="">
+            </div>
+            <div class="detail-box">
+              <p style="font-weight: 500;">
+                Qayerdan:
+                <span class="small"> Qaraqalpog'iston res, Jondor</span>
+              </p> 
+              <p style="font-weight: 500;">
+                Qayerga:
+                <span class="small"> Buxoro, Shofirkon</span>
+              </p> 
+             <div class="d-flex justify-content-between">
+              <div class="price d-flex">
+                <span>Bosh joy: </span>
+                <p>3ta</p>
+              </div>
+              <div class="duration d-flex">
+                <span>◷</span>
+                <p>  20:00</p>
+              </div>
+              
+             </div>
+            </div>
+          </div> -->
+        </div>
+        
+        <button id="prev-btn" onclick="prevPage()"><</button>
+        <button id="next-btn" onclick="nextPage()">></button>
+      </div>
+      </div>
+    </section>
+  
+    <!-- end news section -->
+
+  
+
+  <!-- service section -->
+
+  <section class="service_section layout_padding">
+    <div class="container">
+      <div class="heading_container">
+        <h2>
+          Bizning <br>
+          xizmatlarimiz
+        </h2>
+      </div>
+      <div class="service_container">
+        <div class="box">
+          <div class="img-box">
+            <img src="images/delivery-man.png" alt="">
+          </div>
+          <div class="detail-box">
+            <h5>
+              Haydovchilik xizmati
+            </h5>
+            <p>
+              O'zingizga ma'qul, havovchi<br>
+               va yo'lovchilarni tanlay olish<br> 
+              imkoniyati
+            </p>
+            <a href="/signin">
+              Tizimga kirish
+            </a>
+          </div>
+        </div>
+        <div class="box">
+          <div class="img-box">
+            <img src="images/client.png" alt="">
+          </div>
+          <div class="detail-box">
+            <h5>
+              Xaridorlar topish xizmati
+            </h5>
+            <p>
+              Haydovchilarga o'zlari belgilagan<br>
+              mashrub bo'yicha yo'lovchilarni<br>
+              topishga ko'maklashish
+            </p>
+            <a href="/signin">
+              Tizimga kirish
+            </a>
+          </div>
+        </div>
+        <div class="box">
+          <div class="img-box">
+            <img src="images/backpack.png" alt="">
+          </div>
+          <div class="detail-box">
+            <h5>
+              Yuklarni tashish xizmati
+            </h5>
+            <p>
+              Yuklaringizni shaharlararo tashishda<br>
+              qulay va arzon imkoniyatni taqdim <br>
+              qilish
+            </p>
+            <a href="/signin">
+              Tizimga kirish
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- end service section -->
+
+  <!-- client section -->
+
+  <section class="client_section layout_padding-bottom">
+    <div class="container">
+      <div class="heading_container">
+        <h2>
+          Mijozlarimizdan <br>
+          Fikrlar
+        </h2>
+      </div>
+      <div class="client_container">
+        <div class="carousel-wrap ">
+          <div class="owl-carousel">
+            <div class="item">
+              <div class="box">
+                <div class="img-box">
+                  <img src="images/client-1.png" alt="">
+                </div>
+                <div class="detail-box">
+                  <h3>
+                    Aliqua
+                  </h3>
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et amet, consectetur adipiscing
+                  </p>
+                  <img src="images/quote.png" alt="">
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <div class="box">
+                <div class="img-box">
+                  <img src="images/client-2.png" alt="">
+                </div>
+                <div class="detail-box">
+                  <h3>
+                    Liqua
+                  </h3>
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et amet, consectetur adipiscing
+                  </p>
+                  <img src="images/quote.png" alt="">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- end client section -->
+
+  <!-- contact section -->
+
+  <!-- <section class="contact_section layout_padding-bottom">
+    <div class="container">
+      <div class="heading_container">
+        <h2>
+          Biz bilan <br>
+          bog'lanish
+        </h2>
+      </div>
+    </div>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-5  offset-md-1">
+          <div class="contact_form">
+            <h4>
+              Get In touch
+            </h4>
+            <form action="">
+              <input type="text" placeholder="Name">
+              <input type="text" placeholder="Phone Number">
+              <input type="text" placeholder="Message" class="message_input">
+              <button>Send</button>
+            </form>
+          </div>
+        </div>
+        <div class="col-md-6 px-0">
+          <div class="img-box">
+            <img src="images/contact-img.png" alt="">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section> -->
+  <!-- end contact section -->
+
+  <!-- app section -->
+
+  <!-- <section class="app_section layout_padding2">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="detail-box">
+            <h2>
+              Download Our app
+            </h2>
+            <div class="text-box">
+              <h5>
+                details
+              </h5>
+              <p>
+                It is a long established fact that a reader will be distracted by the readable content of a page when distribution of letters
+              </p>
+            </div>
+            <div class="text-box">
+              <h5>
+                How it works
+              </h5>
+              <p>
+                It is a long established fact that a reader will be distracted by the readable content of a page when distribution of letters
+              </p>
+            </div>
+            <div class="btn-box">
+              <a href="">
+                <img src="images/playstore.png" alt="">
+              </a>
+              <a href="">
+                <img src="images/appstore.png" alt="">
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="img-box">
+            <img src="images/mobile.png" alt="">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section> -->
+
+  <!-- end app section -->
+
+  <!-- why section -->
+
+  <section class="why_section layout_padding">
+    <div class="container">
+      <div class="heading_container">
+        <h2>
+          Nimaga bizni <br>
+          tanlashadi
+        </h2>
+      </div>
+      <div class="why_container">
+        <div class="box">
+          <div class="img-box">
+            <img src="images/delivery-man-white.png" alt="" class="img-1">
+            <img src="images/delivery-man-black.png" alt="" class="img-2">
+          </div>
+          <div class="detail-box">
+            <h5>
+              Arzon va sifatli
+            </h5>
+            <p>
+              Bizning dasturimiz orqali manzilinggizga arzon va tajribali haydovchini saralagan holda bora olasiz.
+            </p>
+          </div>
+        </div>
+        <div class="box">
+          <div class="img-box">
+            <img src="images/shield-white.png" alt="" class="img-1">
+            <img src="images/shield-black.png" alt="" class="img-2">
+          </div>
+          <div class="detail-box">
+            <h5>
+              Pochta va Yuk tashish
+            </h5>
+            <p>
+              Pochtangizni va Yukingizni sifatli, tez va arzon narxlarda yetkazib berish xizmati
+            </p>
+          </div>
+        </div>
+        <div class="box">
+          <div class="img-box">
+            <img src="images/repairing-service-white.png" alt="" class="img-1">
+            <img src="images/repairing-service-black.png" alt="" class="img-2">
+          </div>
+          <div class="detail-box">
+            <h5>
+              24x7 xizmati
+            </h5>
+            <p>
+              Bizning dasturimizdan siz kunning istalgan vaqtida foydalanishingiz va o`zingizni mashrutingizni o`zingizga yoqadigan insonlar bilan birga topishingiz mumkun.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- end why section -->
+
+  <!-- info section -->
+
+  <!-- <section class="info_section layout_padding-top layout_padding2-bottom">
+    <div class="container">
+      <div class="box">
+        <div class="info_form">
+          <h4>
+            Subscribe Our Newsletter
+          </h4>
+          <form action="">
+            <input type="text" placeholder="Enter your email">
+            <div class="d-flex justify-content-end">
+              <button>
+
+              </button>
+            </div>
+          </form>
+        </div>
+        <div class="info_links">
+          <ul>
+            <li class=" ">
+              <a class="" href="index.html">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="">
+              <a class="" href="about.html"> About</a>
+            </li>
+            <li class="">
+              <a class="" href="service.html"> Services </a>
+            </li>
+            <li class="">
+              <a class="" href="news.html"> News</a>
+            </li>
+            <li class="">
+              <a class="" href="contact.html">Contact Us</a>
+            </li>
+            <li class="">
+              <a class="" href="#">Login</a>
+            </li>
+          </ul>
+        </div>
+        <div class="info_social">
+          <div>
+            <a href="">
+              <img src="images/fb.png" alt="">
+            </a>
+          </div>
+          <div>
+            <a href="">
+              <img src="images/twitter.png" alt="">
+            </a>
+          </div>
+          <div>
+            <a href="">
+              <img src="images/linkedin.png" alt="">
+            </a>
+          </div>
+          <div>
+            <a href="">
+              <img src="images/instagram.png" alt="">
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </section> -->
+
+  <!-- end info section -->
+
+  <!-- footer section -->
+  <section class="container-fluid footer_section">
+    <div class="container" style="display: flex; align-items: center; justify-content: space-between;">
+      <div class="info_social" style="display: flex; align-items: center; justify-content: flex-start;">
+        <div style="margin-right: 10px;">
+          <a href="">
+            <img src="images/fb.png" alt="">
+          </a>
+        </div>
+        <div style="margin-right: 10px;">
+          <a href="">
+            <img src="images/twitter.png" alt="">
+          </a>
+        </div>
+        <div style="margin-right: 10px;">
+          <a href="">
+            <img src="images/linkedin.png" alt="">
+          </a>
+        </div>
+        <div style="margin-right: 10px;">
+          <a href="">
+            <img src="images/instagram.png" alt="">
+          </a>
+        </div>
+      </div>
+      <p>
+        &copy; 2024 
+        <!-- All Rights Reserved By
+        <a href="https://html.design/">Free Html Templates</a> -->
+      </p>
+    </div>
+  </section>
+  <!-- footer section -->
+
+  <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+  <script type="text/javascript" src="js/bootstrap.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js">
+  </script>
+
+
+  <!-- owl carousel script -->
+  <script type="text/javascript">
+    $(".owl-carousel").owlCarousel({
+      loop: true,
+      margin: 20,
+      navText: [],
+      autoplay: true,
+      autoplayHoverPause: true,
+      responsive: {
+        0: {
+          items: 1
+        },
+        768: {
+          items: 2
+        },
+        1000: {
+          items: 2
+        }
+      }
+    });
+  </script>
+  <!-- end owl carousel script -->
+
+  <script>
+    const slicerContainer = document.getElementsByClassName('news_container');
+    const slicerItems = document.querySelectorAll('.news_container .box');
+    const itemsPerPage = 4;
+    let currentPage = 0;
+
+    function showPage(page) {
+        const start = page * itemsPerPage;
+        const end = start + itemsPerPage;
+        
+        slicerItems.forEach((item, index) => {
+            item.style.display = (index >= start && index < end) ? 'block' : 'none';
+        });
+    }
+
+    function nextPage() {
+        currentPage = Math.min(currentPage + 1, Math.ceil(slicerItems.length / itemsPerPage) - 1);
+        showPage(currentPage);
+    }
+
+    function prevPage() {
+        currentPage = Math.max(currentPage - 1, 0);
+        showPage(currentPage);
+    }
+
+    showPage(currentPage);
+
+</script>
+
+<script>
+// var SendValue = {
+//   from:0,
+//   to:0,
+//   count:0,
+//   date:''
+// }
+  /* When the user clicks on the button,
+toggle between hiding and showing the dropdown content */
+function myFunction() {
+  document.getElementById("myDropdown").classList.toggle("show");
+}
+
+document.querySelectorAll("#myDropdown > a").forEach(item=>
+item.addEventListener('click',(e)=>{
+  input = document.getElementById("myInput");
+  var Target = e.target.innerText
+  var id = e.target.id
+  input.value=id;
+ document.querySelector("#dropbtn").innerHTML=`${Target}`
+ myFunction()
+}))
+
+
+function filterFunction() {
+  var input, filter, ul, li, a, i;
+  input = document.getElementById("myInput");
+  filter = input.value.toUpperCase();
+  div = document.getElementById("myDropdown");
+  a = div.getElementsByTagName("a");
+  for (i = 0; i < a.length; i++) {
+    txtValue = a[i].textContent || a[i].innerText;
+    if (txtValue.toUpperCase().indexOf(filter) > -1) {
+      a[i].style.display = "";
+    } else {
+      a[i].style.display = "none";
+    }
+  }
+}
+function myFunction1() {
+document.getElementById("myDropdown1").classList.toggle("show");
+}
+document.querySelectorAll("#myDropdown1 > a").forEach(item=>
+
+item.addEventListener('click',(e)=>{
+  input = document.getElementById("myInput1");
+  var Target = e.target.innerText
+  var id = e.target.id
+  input.value=id;
+ document.querySelector("#dropbtn1").innerHTML=`${Target}`
+ myFunction1()
+}))
+function filterFunction1() {
+  var input, filter, ul, li, a, i;
+  input = document.getElementById("myInput1");
+  filter = input.value.toUpperCase();
+  div = document.getElementById("myDropdown1");
+  a = div.getElementsByTagName("a");
+  for (i = 0; i < a.length; i++) {
+    txtValue = a[i].textContent || a[i].innerText;
+    if (txtValue.toUpperCase().indexOf(filter) > -1) {
+      a[i].style.display = "";
+    } else {
+      a[i].style.display = "none";
+    }
+  }
+}
+</script>
+
+<script>
+$(document).ready(function() {
+  const minus = $('.quantity__minus');
+  const plus = $('.quantity__plus');
+  const input = $('.quantity__input');
+  minus.click(function(e) {
+    e.preventDefault();
+    console.log(input);
+    var value = input.val();
+    if (value > 1) {
+      value--;
+    }
+    input.val(value);
+  });
+  
+  plus.click(function(e) {
+    e.preventDefault();
+    var value = input.val();
+    value++;
+    input.val(value);
+  })
+});
+
+</script>
+  
+
+</body>
+
+</html>
